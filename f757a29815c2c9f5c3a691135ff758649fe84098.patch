@@ -1,0 +1,24 @@
+From f757a29815c2c9f5c3a691135ff758649fe84098 Mon Sep 17 00:00:00 2001
+From: Ivan Kozik <ivan@ludios.org>
+Date: Wed, 30 Sep 2015 23:30:27 +0000
+Subject: [PATCH] Temporary fix for https://github.com/haypo/trollius/issues/4
+
+---
+ trollius/futures.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/trollius/futures.py b/trollius/futures.py
+index 4d4e20f..9bcd96b 100644
+--- a/trollius/futures.py
++++ b/trollius/futures.py
+@@ -423,8 +423,8 @@ def _copy_state(self, other):
+                 result = other.result()
+                 self.set_result(result)
+ 
+-    if compat.PY35:
+-        __await__ = __iter__ # make compatible with 'await' expression
++    #if compat.PY35:
++    #    __await__ = __iter__ # make compatible with 'await' expression
+ 
+ if events.asyncio is not None:
+     # Accept also asyncio Future objects for interoperability

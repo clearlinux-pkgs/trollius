@@ -4,7 +4,7 @@
 #
 Name     : trollius
 Version  : 2.0
-Release  : 12
+Release  : 13
 URL      : https://pypi.python.org/packages/source/t/trollius/trollius-2.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/t/trollius/trollius-2.0.tar.gz
 Summary  : Port of the Tulip project (asyncio module, PEP 3156) on Python 2
@@ -18,6 +18,7 @@ BuildRequires : python-dev
 BuildRequires : python-mock
 BuildRequires : python3-dev
 BuildRequires : setuptools
+Patch1 : f757a29815c2c9f5c3a691135ff758649fe84098.patch
 
 %description
 Trollius provides infrastructure for writing single-threaded concurrent
@@ -35,6 +36,7 @@ python components for the trollius package.
 
 %prep
 %setup -q -n trollius-2.0
+%patch1 -p1
 
 %build
 python2 setup.py build -b py2
