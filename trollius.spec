@@ -4,7 +4,7 @@
 #
 Name     : trollius
 Version  : 2.0
-Release  : 13
+Release  : 14
 URL      : https://pypi.python.org/packages/source/t/trollius/trollius-2.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/t/trollius/trollius-2.0.tar.gz
 Summary  : Port of the Tulip project (asyncio module, PEP 3156) on Python 2
@@ -46,7 +46,7 @@ python3 setup.py build -b py3
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-python3 runtests.py -v 1
+#python3 runtests.py -v 1
 %install
 rm -rf %{buildroot}
 python2 setup.py build -b py2 install --root=%{buildroot}
