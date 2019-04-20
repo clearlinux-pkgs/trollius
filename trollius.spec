@@ -4,7 +4,7 @@
 #
 Name     : trollius
 Version  : 2.2
-Release  : 30
+Release  : 31
 URL      : https://files.pythonhosted.org/packages/98/47/000d403a209e5d0c2753feabd3bbbd09a11e32652899abffc1ef5d5c0abb/trollius-2.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/98/47/000d403a209e5d0c2753feabd3bbbd09a11e32652899abffc1ef5d5c0abb/trollius-2.2.tar.gz
 Summary  : Port of the Tulip project (asyncio module, PEP 3156) on Python 2
